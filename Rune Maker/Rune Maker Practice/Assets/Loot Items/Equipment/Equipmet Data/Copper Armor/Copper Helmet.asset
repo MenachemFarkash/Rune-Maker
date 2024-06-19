@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218a22e8cfd48b3428131aa22e1d62db, type: 3}
+  m_Name: Copper Helmet
+  m_EditorClassIdentifier: 
+  name: Mithril Helmet
+  icon: {fileID: 21300000, guid: ec9bf2f25451c0f4092f64cba942cdff, type: 3}
+  isDefaultItem: 0
+  equipSlot: 0
+  coveredMeshRegions: 
+  mesh: {fileID: 7277063131848171997, guid: 59917cf779ba3ba45bc8bae1b160c843, type: 3}
+  armorModifier: 1
+  damageModifier: 0

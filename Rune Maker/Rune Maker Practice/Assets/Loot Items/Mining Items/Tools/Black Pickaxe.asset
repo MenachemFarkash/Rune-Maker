@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218a22e8cfd48b3428131aa22e1d62db, type: 3}
+  m_Name: Black Pickaxe
+  m_EditorClassIdentifier: 
+  name: Black Pickaxe
+  icon: {fileID: 21300000, guid: a83218639151a7a449896eefb7ac8e8e, type: 3}
+  isDefaultItem: 0
+  buyPrice: 25
+  sellPrice: 20
+  type: 1
+  equipSlot: 3
+  coveredMeshRegions: 
+  mesh: {fileID: 3736659287299117239, guid: 5c6dfca45dbd5f54d80af327cfa79152, type: 3}
+  armorModifier: 0
+  damageModifier: 0
+  isPickaxe: 1

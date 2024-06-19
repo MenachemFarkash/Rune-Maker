@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1acb6782f31419c42ab3571a7d070265, type: 3}
+  m_Name: Bronze Bar
+  m_EditorClassIdentifier: 
+  name: Bronze Bar
+  icon: {fileID: 21300000, guid: 3fea7aaf3a0d56145b41075210af28ea, type: 3}
+  isDefaultItem: 0
+  buyPrice: 65
+  sellPrice: 35
+  type: 3

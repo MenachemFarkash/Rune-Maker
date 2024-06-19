@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6248339a722cf3f429d0b74fcfdc118d, type: 3}
+  m_Name: 2nd Test Quest
+  m_EditorClassIdentifier: 
+  Tasks: []
+  CurrentActiveTask: {fileID: 0}
+  QuestProgress: 0
+  QuestCurrentState: 0
+  QuestName: 2nd Test Quest
+  QuestDescription: this is another test quest to see if i can chagne while the info
+    is still open
+  QuestRequirements: the other half of the brain
