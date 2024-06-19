@@ -30,6 +30,31 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        //if (EventSystem.current.IsPointerOverGameObject())
+        //    return;
+
+        //if (Input.GetMouseButtonDown(0)) {
+        //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
+
+        //    if (Physics.Raycast(ray, out hit, 100f, movementMask)) {
+        //        RemoveFocus();
+        //        motor.MoveToPoint(hit.point);
+        //    }
+        //}
+
+        //if (Input.GetMouseButtonDown(1)) {
+        //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
+
+        //    if (Physics.Raycast(ray, out hit, 100f, ~playerLayerMask)) {
+        //        Interactable interactable = hit.collider.GetComponent<Interactable>();
+        //        if (interactable != null) {
+        //            SetFocus(interactable);
+        //        }
+        //    }
+        //}
+
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
@@ -41,11 +66,6 @@ public class PlayerController : MonoBehaviour {
                 RemoveFocus();
                 motor.MoveToPoint(hit.point);
             }
-        }
-
-        if (Input.GetMouseButtonDown(1)) {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100f, ~playerLayerMask)) {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
@@ -53,6 +73,15 @@ public class PlayerController : MonoBehaviour {
                     SetFocus(interactable);
                 }
             }
+
+
+        }
+
+        if (Input.GetMouseButtonDown(1)) {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+
         }
     }
 
