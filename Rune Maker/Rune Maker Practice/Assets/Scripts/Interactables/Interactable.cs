@@ -10,7 +10,9 @@ public class Interactable : MonoBehaviour {
     bool hasInteracted = false;
 
 
+
     public virtual void Interact() {
+
 
         print("interacting with: " + name);
 

@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
@@ -13,6 +16,13 @@ public class DialogueManager : MonoBehaviour {
 
     #endregion
 
+    //UI Refrences
+    [SerializeField] private GameObject dialogueBox;
+
+    [SerializeField] private TextMeshProUGUI dialogueNameText;
+    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private Image NPCFace;
+
     private Queue<string> sentences;
 
     private void Start() {
@@ -20,6 +30,47 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void StartDialogue(Dialogue dialogue) {
+        print("Starting conversation with " + dialogue.name);
+        dialogueBox.SetActive(true);
 
+
+        dialogueNameText.text = dialogue.name;
+        NPCFace.sprite = dialogue.Image;
+
+        sentences.Clear();
+
+
+        foreach (string sentence in dialogue.sentences) {
+            sentences.Enqueue(sentence);
+        }
+
+        DisplayNextSentence();
+
+    }
+
+    public void DisplayNextSentence() {
+        if (sentences.Count == 0) {
+            EndDialogue();
+            return;
+        }
+
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence) {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray()) {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(2 * Time.deltaTime);
+        }
+    }
+
+
+
+    public void EndDialogue() {
+        print("End Of Conversation");
+        dialogueBox.SetActive(false);
     }
 }
