@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class QuestTask : ScriptableObject {
-
+    public TaskType taskType;
 }
 
 [CreateAssetMenu(fileName = "TalkTask", menuName = "Quests/Tasks/Talk Task")]

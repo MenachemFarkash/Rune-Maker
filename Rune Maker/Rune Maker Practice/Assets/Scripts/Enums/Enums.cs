@@ -18,3 +18,11 @@ public enum QuestState {
     InProgress,
     Completed
 }
+
+public enum TaskType {
+    TalkTo,
+    Gather,
+    Kill,
+    Craft,
+    Deliver
+}
