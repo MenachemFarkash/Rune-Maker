@@ -9306,6 +9306,7 @@ MonoBehaviour:
   dialogueNameText: {fileID: 2062171574}
   dialogueText: {fileID: 633184996}
   NPCFace: {fileID: 302952780}
+  NPCTalkedTo: {fileID: 0}
 --- !u!4 &352418172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4830129362015566, guid: 185af23d3ed2f6e48b1efab88c5756a5,
@@ -46113,7 +46114,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1682917823560798, guid: f9d0bec09311bef48aa1fb044570e5de,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1628215550}
+      addedObject: {fileID: 1628215554}
     - targetCorrespondingSourceObject: {fileID: 1682917823560798, guid: f9d0bec09311bef48aa1fb044570e5de,
         type: 3}
       insertIndex: -1
@@ -46156,22 +46157,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.43792152, y: 1.8932533, z: 0.44403458}
   m_Center: {x: 0.0061101615, y: 0.8498554, z: 0.021380663}
---- !u!114 &1628215550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628215548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1de1b2f0393934a826892e3cc3873d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 1628215547}
-  ShopUIGameObject: {fileID: 1341808808}
-  ShopItems: {fileID: 11400000, guid: 348e1066cf99d02428407ffa01218976, type: 2}
 --- !u!114 &1628215552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46194,6 +46179,23 @@ MonoBehaviour:
 
       And i
       want this one to be long so i can see how it animates propperly'
+--- !u!114 &1628215554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628215548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64950a35d150e8a4cbc022d9838ddc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 1628215547}
+  NPCName: Logs Marchant
+  trigger: {fileID: 1628215552}
+  proffesion: {fileID: 0}
 --- !u!1 &1634049515
 GameObject:
   m_ObjectHideFlags: 0

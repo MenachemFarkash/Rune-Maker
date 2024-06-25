@@ -13,14 +13,9 @@ MonoBehaviour:
   m_Name: Test Quest
   m_EditorClassIdentifier: 
   Tasks:
-  - {fileID: 11400000, guid: 3fa7e29b058e865458b4589805883489, type: 2}
-  - {fileID: 11400000, guid: 2464dd80b77a2884b872cb3353a2047d, type: 2}
-  - {fileID: 11400000, guid: 832808d6de263af439023d66d5d76ec3, type: 2}
-  - {fileID: 11400000, guid: ea1be5c7e550e3d4aad4fc99605687cf, type: 2}
-  - {fileID: 11400000, guid: e8638f2ac9d3ee942b10869a04aeec73, type: 2}
   - {fileID: 11400000, guid: 2916db4935bec7a42964e92ac3305ee4, type: 2}
   CurrentActiveTask: {fileID: 0}
-  QuestProgress: 2
+  QuestProgress: 0
   QuestCurrentState: 0
   QuestName: Test Quest
   QuestDescription: This is a test Quest to test the Quests

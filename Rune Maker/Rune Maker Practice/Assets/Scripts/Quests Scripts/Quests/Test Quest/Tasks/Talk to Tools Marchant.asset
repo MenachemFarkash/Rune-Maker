@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Talk to Tools Marchant
   m_EditorClassIdentifier: Assembly-CSharp::TalkTask
   taskType: 0
-  taskDescription: Talk to the Tools Marchant in the town
-  npcName: Tools Marchant
+  taskDescription: Talk to the Logs Marchant in the town
+  Npc: {fileID: 0}

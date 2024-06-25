@@ -26,7 +26,7 @@ public class QuestManager : MonoBehaviour {
         if (taskType == CurrentActiveTask.taskType) {
             switch (taskType) {
                 case TaskType.TalkTo:
-                    CheckNPCTalkedTo();
+
                     break;
                 case TaskType.Gather:
                     CheckItemGathered();
@@ -35,7 +35,6 @@ public class QuestManager : MonoBehaviour {
                     CheckEnemyKilled();
                     break;
                 case TaskType.Craft:
-                    //CheckItemCrafted(CurrentActiveTask,);
                     break;
                 case TaskType.Deliver:
                     CheckItemDelivered();
@@ -47,8 +46,10 @@ public class QuestManager : MonoBehaviour {
 
     }
 
-    public void CheckNPCTalkedTo() {
-
+    public void CheckNPCTalkedTo(TalkTask task, NPC npc) {
+        if (npc == task.Npc) {
+            ProgressQuest();
+        }
     }
 
     public void CheckItemGathered() {
@@ -61,8 +62,7 @@ public class QuestManager : MonoBehaviour {
 
     public void CheckItemCrafted(CraftTask task, Item itemCrafted) {
         if (itemCrafted == task.itemToCraft) {
-            CurrentActiveTask = CurrentActiveQuest.Tasks[CurrentActiveQuest.QuestProgress++];
-            QuestsUIManager.instance.UpdateTaskProgressUI();
+            ProgressQuest();
         }
     }
 
@@ -74,5 +74,10 @@ public class QuestManager : MonoBehaviour {
         CurrentActiveQuest = newQuest;
         CurrentActiveTask = CurrentActiveQuest.Tasks[0];
         print("New Quest Started");
+    }
+
+    public void ProgressQuest() {
+        CurrentActiveTask = CurrentActiveQuest.Tasks[CurrentActiveQuest.QuestProgress++];
+        QuestsUIManager.instance.UpdateTaskProgressUI();
     }
 }

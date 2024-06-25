@@ -23,6 +23,8 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Image NPCFace;
 
+    public NPC NPCTalkedTo;
+
     private Queue<string> sentences;
 
     private void Start() {
@@ -71,6 +73,10 @@ public class DialogueManager : MonoBehaviour {
 
     public void EndDialogue() {
         print("End Of Conversation");
+        if (NPCTalkedTo != null) {
+            QuestManager.instance.CheckNPCTalkedTo((TalkTask)QuestManager.instance.CurrentActiveTask, NPCTalkedTo);
+        }
+        NPCTalkedTo.OpenProffesion();
         dialogueBox.SetActive(false);
     }
 }
