@@ -2,6 +2,14 @@ using TMPro;
 using UnityEngine;
 
 public class QuestsUIManager : MonoBehaviour {
+    #region Singleton
+    public static QuestsUIManager instance;
+
+    private void Awake() {
+        instance = this;
+    }
+
+    #endregion
 
     public Quest currentOpenQuest;
 
@@ -43,7 +51,7 @@ public class QuestsUIManager : MonoBehaviour {
 
     public void UpdateTaskProgressUI() {
         QuestProgressTitle.text = questManager.CurrentActiveQuest.QuestName;
-        taskProgressDescription.text = questManager.CurrentActiveQuest.QuestDescription;
+        taskProgressDescription.text = questManager.CurrentActiveTask.taskDescription;
         TaskNumber.text = $"{questManager.CurrentActiveQuest.QuestProgress} / {questManager.CurrentActiveQuest.Tasks.Count}";
     }
 

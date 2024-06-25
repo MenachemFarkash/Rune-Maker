@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Deliver 1 Copper ore To Logs Marchant
   m_EditorClassIdentifier: Assembly-CSharp::DeliverTask
+  taskType: 4
+  taskDescription: Give the tools marchant 1 copper ore
   itemsToDeliver:
   - {fileID: 11400000, guid: e00c1804f2baeb04897158c4d6af9f3d, type: 2}

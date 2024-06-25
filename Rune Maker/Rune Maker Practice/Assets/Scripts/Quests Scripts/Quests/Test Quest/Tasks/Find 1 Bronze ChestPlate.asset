@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Find 1 Bronze ChestPlate
   m_EditorClassIdentifier: Assembly-CSharp::FindTask
+  taskType: 1
+  taskDescription: Find one bronze chestplate in the empty shop
   itemToFind: {fileID: 11400000, guid: ac814ea28ab1aed4bacd80698c6f6b4b, type: 2}
   amountToFind: 1

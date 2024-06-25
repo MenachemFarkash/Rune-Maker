@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Kill A Cow
   m_EditorClassIdentifier: Assembly-CSharp::KillTask
+  taskType: 2
+  taskDescription: Kill 1 Cow
   enemyName: Cow
   amountToKill: 1

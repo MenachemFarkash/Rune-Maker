@@ -42,6 +42,9 @@ public class CraftingManager : MonoBehaviour {
                     }
                 }
                 inventory.AddItem(currentActiveRecipe.ItemOutput);
+                if (QuestManager.instance.CurrentActiveTask.taskType == TaskType.Craft && QuestManager.instance.CurrentActiveTask != null) {
+                    QuestManager.instance.CheckItemCrafted((CraftTask)QuestManager.instance.CurrentActiveTask, currentActiveRecipe.ItemOutput);
+                }
                 tempResourceCount = 0;
 
 

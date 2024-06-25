@@ -9230,7 +9230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSelectedItem: {fileID: 0}
   space: 28
-  items: []
+  items:
+  - {fileID: 11400000, guid: 3c0cb37eb5fe79e4c9c8ae99422b66d3, type: 2}
 --- !u!4 &351340466
 Transform:
   m_ObjectHideFlags: 0

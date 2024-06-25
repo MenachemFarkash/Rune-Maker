@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Mine 2 Copper Ore
   m_EditorClassIdentifier: Assembly-CSharp::GatherTask
+  taskType: 1
+  taskDescription: Mine 2 Copper ores
   itemsToGather:
   - {fileID: 11400000, guid: e00c1804f2baeb04897158c4d6af9f3d, type: 2}
   - {fileID: 11400000, guid: e00c1804f2baeb04897158c4d6af9f3d, type: 2}

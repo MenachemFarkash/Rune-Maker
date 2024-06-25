@@ -35,7 +35,7 @@ public class QuestManager : MonoBehaviour {
                     CheckEnemyKilled();
                     break;
                 case TaskType.Craft:
-                    CheckItemCrafted();
+                    //CheckItemCrafted(CurrentActiveTask,);
                     break;
                 case TaskType.Deliver:
                     CheckItemDelivered();
@@ -59,8 +59,11 @@ public class QuestManager : MonoBehaviour {
 
     }
 
-    public void CheckItemCrafted() {
-
+    public void CheckItemCrafted(CraftTask task, Item itemCrafted) {
+        if (itemCrafted == task.itemToCraft) {
+            CurrentActiveTask = CurrentActiveQuest.Tasks[CurrentActiveQuest.QuestProgress++];
+            QuestsUIManager.instance.UpdateTaskProgressUI();
+        }
     }
 
     public void CheckItemDelivered() {
@@ -69,6 +72,7 @@ public class QuestManager : MonoBehaviour {
 
     public void StartQuest(Quest newQuest) {
         CurrentActiveQuest = newQuest;
+        CurrentActiveTask = CurrentActiveQuest.Tasks[0];
         print("New Quest Started");
     }
 }
