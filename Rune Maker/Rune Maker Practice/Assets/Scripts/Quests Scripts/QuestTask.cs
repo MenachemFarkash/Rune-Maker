@@ -8,7 +8,7 @@ public class QuestTask : ScriptableObject {
 
 [CreateAssetMenu(fileName = "TalkTask", menuName = "Quests/Tasks/Talk Task")]
 public class TalkTask : QuestTask {
-    public NPC Npc;
+    public string NPCId;
 }
 
 [CreateAssetMenu(fileName = "GatherTask", menuName = "Quests/Tasks/Gather Task")]

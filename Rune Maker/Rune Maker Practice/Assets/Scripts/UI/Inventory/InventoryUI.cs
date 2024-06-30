@@ -30,7 +30,6 @@ public class InventoryUI : MonoBehaviour {
     }
 
     void UpdateUI() {
-        print("Updating UI");
 
         for (int i = 0; i < slots.Length; i++) {
             if (i < inventory.items.Count) {

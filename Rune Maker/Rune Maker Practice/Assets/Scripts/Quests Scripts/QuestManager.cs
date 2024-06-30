@@ -46,8 +46,8 @@ public class QuestManager : MonoBehaviour {
 
     }
 
-    public void CheckNPCTalkedTo(TalkTask task, NPC npc) {
-        if (npc == task.Npc) {
+    public void CheckNPCTalkedTo(TalkTask task, string npcId) {
+        if (npcId == task.NPCId) {
             ProgressQuest();
         }
     }
@@ -72,12 +72,22 @@ public class QuestManager : MonoBehaviour {
 
     public void StartQuest(Quest newQuest) {
         CurrentActiveQuest = newQuest;
+        newQuest.CurrentActiveTask = newQuest.Tasks[0];
+        newQuest.QuestProgress = 1;
         CurrentActiveTask = CurrentActiveQuest.Tasks[0];
-        print("New Quest Started");
     }
 
     public void ProgressQuest() {
-        CurrentActiveTask = CurrentActiveQuest.Tasks[CurrentActiveQuest.QuestProgress++];
-        QuestsUIManager.instance.UpdateTaskProgressUI();
+        if (CurrentActiveQuest.QuestProgress != CurrentActiveQuest.Tasks.Count) {
+            CurrentActiveQuest.MoveToNextTask();
+            CurrentActiveTask = CurrentActiveQuest.CurrentActiveTask;
+            QuestsUIManager.instance.UpdateTaskProgressUI();
+        } else {
+            FinishQuest(CurrentActiveQuest);
+        }
+    }
+
+    public void FinishQuest(Quest quest) {
+        quest.ChangeQuestState(QuestState.Completed);
     }
 }

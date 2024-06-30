@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour {
     public void EndDialogue() {
         print("End Of Conversation");
         if (NPCTalkedTo != null) {
-            QuestManager.instance.CheckNPCTalkedTo((TalkTask)QuestManager.instance.CurrentActiveTask, NPCTalkedTo);
+            QuestManager.instance.CheckNPCTalkedTo((TalkTask)QuestManager.instance.CurrentActiveTask, NPCTalkedTo.npcId);
         }
         NPCTalkedTo.OpenProffesion();
         dialogueBox.SetActive(false);

@@ -24,7 +24,11 @@ public class Quest : ScriptableObject {
     }
 
     public void MoveToNextTask() {
-        CurrentActiveTask = Tasks[QuestProgress + 1];
-        QuestProgress++;
+        if (QuestProgress + 1 > Tasks.Count) {
+            QuestManager.instance.FinishQuest(this);
+        } else {
+            CurrentActiveTask = Tasks[QuestProgress];
+            QuestProgress++;
+        }
     }
 }

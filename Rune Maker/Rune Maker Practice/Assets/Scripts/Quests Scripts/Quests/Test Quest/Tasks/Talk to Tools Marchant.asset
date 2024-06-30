@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TalkTask
   taskType: 0
   taskDescription: Talk to the Logs Marchant in the town
-  Npc: {fileID: 0}
+  NPCId: Logs

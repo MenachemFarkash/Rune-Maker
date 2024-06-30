@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tasks:
   - {fileID: 11400000, guid: 2916db4935bec7a42964e92ac3305ee4, type: 2}
-  CurrentActiveTask: {fileID: 0}
-  QuestProgress: 0
-  QuestCurrentState: 0
+  - {fileID: 11400000, guid: 3fa7e29b058e865458b4589805883489, type: 2}
+  CurrentActiveTask: {fileID: 11400000, guid: 3fa7e29b058e865458b4589805883489, type: 2}
+  QuestProgress: 2
+  QuestCurrentState: 2
   QuestName: Test Quest
   QuestDescription: This is a test Quest to test the Quests
   QuestRequirements: Brain

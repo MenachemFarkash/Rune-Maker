@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Craft 1 Pickaxe
   m_EditorClassIdentifier: Assembly-CSharp::CraftTask
   taskType: 3
-  taskDescription: Craft 1 Pickaxe
+  taskDescription: Craft one Pickaxe at the smithing anvil
   itemToCraft: {fileID: 11400000, guid: 2c5435ed59df3814990205d98341bd04, type: 2}
-  amountToCraft: 1
+  amountToCraft: 0
