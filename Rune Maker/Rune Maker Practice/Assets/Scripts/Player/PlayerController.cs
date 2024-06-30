@@ -64,7 +64,8 @@ public class PlayerController : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 100f, movementMask)) {
                 RemoveFocus();
-                motor.MoveToPoint(hit.point);
+                motor.MoveToPoint(new Vector3(Mathf.Round(hit.point.x), hit.point.y, Mathf.Round(hit.point.z)));
+                print($"hit.Point: {hit.point} hit.point but rounded:{new Vector3(Mathf.Round(hit.point.x), hit.point.y, Mathf.Round(hit.point.z))} ");
             }
 
             if (Physics.Raycast(ray, out hit, 100f, ~playerLayerMask)) {
@@ -77,12 +78,10 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-        if (Input.GetMouseButtonDown(1)) {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-
-        }
+        //if (Input.GetMouseButtonDown(1)) {
+        //   Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
+        //}
     }
 
     void SetFocus(Interactable newFocus) {

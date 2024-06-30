@@ -47,7 +47,7 @@ public class QuestManager : MonoBehaviour {
     }
 
     public void CheckNPCTalkedTo(TalkTask task, string npcId) {
-        if (npcId == task.NPCId) {
+        if (CurrentActiveQuest != null && npcId == task.NPCId) {
             ProgressQuest();
         }
     }

@@ -3,6 +3,8 @@ using UnityEngine;
 public class Shop : Interactable {
     public GameObject ShopUIGameObject;
     public ShopItems ShopItems;
+
+
     public override void Interact() {
         base.Interact();
 
