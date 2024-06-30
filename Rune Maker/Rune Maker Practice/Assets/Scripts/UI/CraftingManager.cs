@@ -38,14 +38,19 @@ public class CraftingManager : MonoBehaviour {
             if (tempResourceCount == currentActiveRecipe.resourcesRequired.Length) {
                 for (int i = 0; i < currentActiveRecipe.resourcesRequired.Length; i++) {
                     if (inventory.items.Contains(currentActiveRecipe.resourcesRequired[i])) {
+                        print(currentActiveRecipe.resourcesRequired[i] + " Found");
                         inventory.items.Remove(currentActiveRecipe.resourcesRequired[i]);
                     }
                 }
+
                 inventory.AddItem(currentActiveRecipe.ItemOutput);
-                if (QuestManager.instance.CurrentActiveTask.taskType == TaskType.Craft && QuestManager.instance.CurrentActiveTask != null) {
-                    QuestManager.instance.CheckItemCrafted((CraftTask)QuestManager.instance.CurrentActiveTask, currentActiveRecipe.ItemOutput);
-                }
                 tempResourceCount = 0;
+                if (QuestManager.instance.CurrentActiveQuest != null) {
+
+                    if (QuestManager.instance.CurrentActiveTask.taskType == TaskType.Craft && QuestManager.instance.CurrentActiveTask != null) {
+                        QuestManager.instance.CheckItemCrafted((CraftTask)QuestManager.instance.CurrentActiveTask, currentActiveRecipe.ItemOutput);
+                    }
+                }
 
 
                 switch (currentActiveRecipe.itemType) {
